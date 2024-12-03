@@ -30,7 +30,7 @@ validar_endpoint() {
 echo "Comprobando la instalación de wireguard-tools..."
 if ! command -v wg &> /dev/null; then
     echo "wireguard-tools no está instalado. Instalando..."
-    sudo apt update && sudo apt install -y wireguard-tools
+    sudo apt update && sudo apt install -y wireguard-tools resolvconf
 else
     echo "wireguard-tools ya está instalado."
 fi
